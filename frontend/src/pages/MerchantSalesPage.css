@@ -1,0 +1,94 @@
+/* 전체 페이지 기본 */
+.merchant-page {
+  padding: 30px 20px;
+  background-color: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 탭 버튼 영역 */
+.sales-tabs {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0 20px;
+}
+
+.sales-tabs button {
+  padding: 8px 18px;
+  background-color: #eee;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.sales-tabs button.active {
+  background-color: #055db4;
+  color: #fff;
+}
+
+/* 이번 달 정산금액 */
+.settlement-summary {
+  font-size: 18px;
+  background-color: #f8f8f8;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #055db4;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #222;
+}
+
+.settlement-summary span {
+  color: #000;
+}
+
+/* 매출 요약 박스 */
+.sales-summary-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 24px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+}
+
+/* 왼쪽 (매출, 반품), 오른쪽 (주문건, 평균결제금액) */
+.sales-left, .sales-right {
+  flex: 1;
+  min-width: 200px;
+}
+
+.sales-left p,
+.sales-right p {
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: #666;
+}
+
+.sales-left h2,
+.sales-right h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #000;
+}
+
+.sales-left h2.negative {
+  color: #d20000;
+}
+
+/* 반응형 대응 */
+@media screen and (max-width: 600px) {
+  .sales-summary-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

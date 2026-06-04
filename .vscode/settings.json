@@ -1,0 +1,11 @@
+{
+    "php.validate.executablePath": "C:\\xampp\\php\\php.exe",
+    "php.suggest.basic": true,
+    "php.validate.enable": true,
+    "php.validate.run": "onType",
+    "intelephense.files.maxSize": 5000000,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "editor.formatOnSave": true
+}

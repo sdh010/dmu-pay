@@ -1,0 +1,241 @@
+/* ===== 기본 레이아웃 ===== */
+.admin-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.admin-container {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 60px);
+}
+
+.admin-sidebar {
+  width: 250px;
+  min-width: 200px;
+  background-color: #055db4;
+  color: white;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 40px 24px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.page-title {
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* ===== 요약 박스 ===== */
+.summary-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.summary-box {
+  background-color: #f0f4f7;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.summary-button-wrap {
+  margin-left: auto;
+}
+
+.settle-button {
+  padding: 15px 30px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ===== 정산 내역 테이블 ===== */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.history-table th,
+.history-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+.text-success {
+  color: green;
+}
+
+.text-danger {
+  color: red;
+}
+
+/* =====  반응형 추가 ===== */
+@media (max-width: 768px) {
+  .admin-container {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    min-width: 100%;
+    max-height: auto;
+    box-sizing: border-box;
+  }
+
+  .admin-content {
+    width: 100%;
+  }
+
+  .summary-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .summary-box {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .summary-button-wrap {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .settle-button {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .history-table {
+    font-size: 14px;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 8px;
+  }
+
+  .summary-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: end;
+  }
+
+  .monthly-sales {
+    background: linear-gradient(135deg, #055db4, #0a7bc4) !important;
+    color: white;
+    border: none !important;
+  }
+
+  .monthly-sales p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+  }
+
+  .monthly-sales h3 {
+    color: white !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+  }
+
+  .summary-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .summary-box p {
+    margin: 0 0 8px 0;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .summary-box h3 {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .summary-button-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .settle-button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    height: fit-content;
+  }
+
+  .settle-button:hover {
+    background: #218838;
+  }
+
+  /* 반응형 디자인 */
+  @media (max-width: 1200px) {
+    .summary-section {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .summary-button-wrap {
+      grid-column: 1 / -1;
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .summary-section {
+      grid-template-columns: 1fr;
+    }
+  }
+}

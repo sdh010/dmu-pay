@@ -1,0 +1,107 @@
+/* 학생 기본 정보 */
+.student-info {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+/* 필터 버튼 영역 */
+.filter-bar {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* 최신순 버튼 */
+.sort-btn {
+  padding: 6px 12px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
+/* 테이블 기본 스타일 */
+.point-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.point-history-table th,
+.point-history-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 포인트 색상 표시 */
+.text-plus {
+  color: green;
+  font-weight: bold;
+}
+
+.text-minus {
+  color: red;
+  font-weight: bold;
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .student-info {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .sort-btn {
+    width: 100%;
+  }
+
+  .point-history-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .point-history-table table {
+    width: 100%;
+    min-width: 600px;
+  }
+
+  .pagination {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pagination button {
+    margin: 5px 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-info {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,156 @@
+.point-history-page {
+  padding: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f8fafc;
+}
+
+/* 상단: 포인트 & 차트 */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.point-box {
+  flex: 1;
+}
+
+.point-box h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.current-point {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.chart-box {
+  flex: 1;
+  text-align: center;
+}
+
+.chart-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.legend {
+  margin-top: 10px;
+}
+
+.legend .line {
+  display: inline-block;
+  width: 20px;
+  height: 4px;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+
+.legend .blue {
+  background-color: #007bff;
+}
+
+.legend .red {
+  background-color: #dc3545;
+}
+
+/* 필터 섹션 */
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.filter-btn {
+  background-color: #0058a4;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background-color: #013b75;
+}
+
+/* 테이블 */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.history-table th,
+.history-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+.history-table thead {
+  background-color: #055db4;
+  color: white;
+}
+
+.plus {
+  color: green;
+}
+
+.minus {
+  color: red;
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #055db4;
+  color: white;
+}
+@media (max-width: 768px) {
+  .point-history-page {
+    padding: 20px;
+  }
+
+  .top-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .point-box, .chart-box {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .history-table th, .history-table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}

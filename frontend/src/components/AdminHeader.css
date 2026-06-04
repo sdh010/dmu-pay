@@ -1,0 +1,63 @@
+/* src/components/AdminHeader.css */
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 30px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ccc;
+  flex-wrap: wrap;
+  z-index: 100;
+}
+
+.admin-header-left {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.admin-logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.admin-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #055db4;
+}
+
+.admin-header-nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.admin-header-nav a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #1f2937;
+  transition: color 0.2s ease;
+  cursor: pointer; 
+  padding: 8px 12px; 
+}
+
+.admin-header-nav a:hover {
+  color: #055db4;
+}
+
+
+.logout-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #1f2937;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.logout-button:hover {
+  color: #055db4;
+}

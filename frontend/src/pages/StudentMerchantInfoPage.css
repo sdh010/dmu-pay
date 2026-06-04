@@ -1,0 +1,93 @@
+.merchant-page {
+  padding: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f8fafc;
+}
+
+.merchant-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #055db4;
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.merchant-filter {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.merchant-filter input,
+.merchant-filter select,
+.merchant-filter button {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.merchant-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.merchant-table th,
+.merchant-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+.merchant-table thead {
+  background-color: #055db4;
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #055db4;
+  color: white;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .merchant-page {
+    padding: 20px;
+  }
+
+  .merchant-filter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .merchant-filter input,
+  .merchant-filter select,
+  .merchant-filter button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .merchant-table th,
+  .merchant-table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,73 @@
+.ranking-page {
+  padding: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f8fafc;
+}
+
+.ranking-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #055db4;
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.my-rank {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.rank-number {
+  font-weight: bold;
+  color: #055db4;
+  font-size: 2.5rem;
+}
+
+.rank-total {
+  color: gray;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.ranking-table th,
+.ranking-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+.ranking-table thead {
+  background-color: #055db4;
+  color: white;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .ranking-page {
+    padding: 20px;
+  }
+
+  .rank-number {
+    font-size: 2rem;
+  }
+
+  .rank-total {
+    font-size: 1rem;
+  }
+
+  .ranking-table th,
+  .ranking-table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}

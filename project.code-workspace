@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "DMU-PAY Backend",
+			"path": "./backend"
+		},
+		{
+			"name": "DMU-PAY Frontend",
+			"path": "./frontend"
+		}
+	],
+	"settings": {
+		"php.validate.executablePath": "C:\\xampp\\php\\php.exe",
+		"php.suggest.basic": true
+	}
+}

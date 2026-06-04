@@ -1,0 +1,171 @@
+body {
+  background-color: #ececec;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.login-page {
+  display: flex;
+  height: 100vh;
+  font-size: 20px;
+}
+
+/* 왼쪽 소개 */
+.login-left {
+  flex: 1;
+  background-color: #f5f7fa;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.login-title {
+  font-size: 5rem;
+  font-weight: bold;
+  color:  #055db4;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin-top: 1.2rem;
+  color: #1f2937;
+}
+
+.desc {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  color: #374151;
+  line-height: 1.9;
+}
+
+/* 오른쪽 로그인 */
+.login-right {
+  flex: 1;
+  background-color: white;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.input-box {
+  margin-bottom: 15px;
+}
+
+.input-box input,
+.input-box select {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  height: 45px;
+  outline: none;
+}
+
+/* 드롭다운 전공 선택 스타일 */
+.input-box select:invalid {
+  color: #888;
+}
+
+.input-box select option {
+  color: #000;
+}
+
+.input-box select option[value=""] {
+  color: #888;
+}
+
+.login-btn {
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #055db4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.signup-btn {
+  background-color: #055db4;
+}
+
+/* 반응형 처리 - 태블릿 이하 */
+@media (max-width: 768px) {
+  .login-page {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .login-left,
+  .login-right {
+    flex: none;
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+
+  .login-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .desc {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .login-form {
+    max-width: 100%;
+  }
+}
+
+/* 반응형 처리 - 스마트폰 */
+@media (max-width: 480px) {
+  .login-left,
+  .login-right {
+    padding: 30px 15px;
+    font-size: 18px;
+  }
+
+  .login-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+  }
+
+  .input-box input,
+  .input-box select {
+    font-size: 16px;
+    height: 40px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+

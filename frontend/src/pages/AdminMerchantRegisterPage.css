@@ -1,0 +1,196 @@
+/* ===== 기본 레이아웃 ===== */
+.merchant-register-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.merchant-register-body {
+  display: flex;
+  flex: 1;
+}
+
+.admin-sidebar {
+  width: 250px;
+  min-width: 200px;
+  background-color: #055db4;
+  color: white;
+}
+
+.merchant-register-content {
+  flex: 1;
+  padding: 40px 24px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ===== 폼 스타일 ===== */
+.merchant-form fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fafafa;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.merchant-form legend {
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.merchant-form table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.merchant-form th {
+  text-align: left;
+  padding: 10px;
+  background-color: #f0f0f0;
+  width: 120px;
+}
+
+.merchant-form td {
+  padding: 10px;
+}
+
+.merchant-form input {
+  width: 100%;
+  max-width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* 업종 드롭다운 스타일 추가 */
+.merchant-form select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath fill='%23666' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 6px;
+  cursor: pointer;
+}
+
+
+.section-divider {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-wrapper {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-wrapper button {
+  padding: 10px 30px;
+  font-size: 16px;
+  background-color: #055db4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-wrapper button:hover {
+  background-color: #003f87;
+}
+
+/* ===== 반응형 - 태블릿 이하 (1024px ↓) ===== */
+@media (max-width: 1024px) {
+  .merchant-register-body {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    display: none;
+  }
+
+  .merchant-register-content {
+    padding: 30px 16px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .merchant-form fieldset {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .merchant-form table {
+    width: 100%;
+  }
+
+  .merchant-form th,
+  .merchant-form td {
+    display: block;
+    width: 100%;
+  }
+
+  .merchant-form th {
+    background-color: transparent;
+    padding: 5px 0;
+    font-weight: bold;
+  }
+
+  .merchant-form td {
+    padding: 5px 0 15px;
+  }
+
+  .btn-wrapper button {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+/* ===== 반응형 - 스마트폰 (480px ↓) ===== */
+@media (max-width: 480px) {
+  .breadcrumb {
+    font-size: 12px;
+  }
+
+  .merchant-register-content {
+    padding: 16px 12px;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
+  }
+
+  .merchant-form fieldset {
+    padding: 14px;
+    max-width: 100% !important;
+  }
+
+  .merchant-form input {
+    font-size: 16px;
+    height: 42px;
+  }
+
+  .btn-wrapper button {
+    font-size: 15px;
+    padding: 12px;
+    width: 100%;
+  }
+}

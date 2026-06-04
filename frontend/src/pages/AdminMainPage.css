@@ -1,0 +1,322 @@
+/* AdminMainPage.css */
+
+.admin-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #055db4;
+  padding: 15px 30px;
+  color: white;
+}
+
+.top-header .logo {
+  width: 120px;
+  height: auto;
+}
+
+.main-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 160px;
+  background-color: #055db4;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.sidebar li {
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebar li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logout-button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: rgb(109, 109, 109);
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.chart-section {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.pie-chart,
+.bar-chart {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 표 디자인 - 학생용 표 */
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.student-table th {
+  background-color: #055db4;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+}
+
+.student-table td {
+  padding: 12px;
+  font-size: 15px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.student-table button {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+/* 표 디자인 - 가맹점용 표 (학생과 동일 스타일) */
+.admin-merchant-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.admin-merchant-table th {
+  background-color: #055db4;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+}
+
+.admin-merchant-table td {
+  padding: 12px;
+  font-size: 15px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.admin-merchant-table button {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+  .main-body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .sidebar li {
+    padding: 10px 16px;
+    font-size: 15px;
+    background-color: #055db4;
+    color: white;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+  }
+
+  .chart-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: list-item !important;
+  }
+
+  .mobile-logout {
+    display: list-item;
+  }
+}
+
+/* 모바일에서 검색 input, 버튼 반응형 처리 */
+@media (max-width: 768px) {
+
+  .search-box input,
+  .search-box button {
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .student-table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .student-table {
+    min-width: 600px;
+  }
+
+  .student-table th,
+  .student-table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* 가맹점 표 반응형 대응 */
+  .admin-merchant-table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .admin-merchant-table {
+    min-width: 700px;
+  }
+
+  .admin-merchant-table th,
+  .admin-merchant-table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .merchant-search-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .merchant-search-bar input,
+  .merchant-search-bar button {
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .pie-chart,
+  .bar-chart {
+    padding: 15px;
+  }
+}
+
+/* 기본 상태 */
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+
+
+
+
+
+@media (min-width: 769px) {
+
+  .search-box input[type="text"],
+  .merchant-search-bar input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .search-box button,
+  .merchant-search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,97 @@
+.merchant-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* 좌우 분배 */
+  background-color: #ffffff;
+  padding: 10px 20px;
+  height: 60px;
+  border-bottom: 1px solid #e0e0e0;
+  box-sizing: border-box;
+}
+
+/* 좌측 로고 영역 */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.logo-img {
+  width: 28px;
+  height: 28px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #055db4;
+}
+
+/* 중앙 가맹점 정보 */
+.header-center {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #055db4;
+}
+
+/* 우측 버튼 영역 */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+/* 드롭다운 토글 버튼 */
+.dropdown-toggle {
+  background-color: #055db4;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 드롭다운 메뉴 */
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  border-radius: 6px;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu button {
+  padding: 10px;
+  border: none;
+  background-color: white;
+  color: #055db4;
+  text-align: left;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
+}
+
+/* 로그아웃 버튼 */
+.header-right button:last-child {
+  background-color: white;
+  color: #055db4;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}

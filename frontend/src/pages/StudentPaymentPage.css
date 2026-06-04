@@ -1,0 +1,83 @@
+/* src/pages/StudentPaymentPage.css */
+.payment-container {
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.back {
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #055db4;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.merchant-name {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #055db4;
+    height: 1.2em;
+}
+
+.balance-display {
+    margin: 16px 0;
+    font-size: 1rem;
+    color: #555;
+    text-align: right;
+}
+
+.error {
+    color: #dc2626;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.pay-btn {
+    width: 100%;
+    padding: 12px;
+    background: #055db4;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.pay-btn:hover {
+    background: #0d47a1;
+}
+
+@media (max-width: 480px) {
+    .payment-container {
+        padding: 10px;
+    }
+
+    input {
+        padding: 8px;
+    }
+
+    .pay-btn {
+        padding: 10px;
+    }
+}

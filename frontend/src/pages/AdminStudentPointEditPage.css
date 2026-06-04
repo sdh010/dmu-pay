@@ -1,0 +1,86 @@
+/* 공통 레이아웃 */
+.breadcrumb {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.student-info table,
+.point-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.student-info th,
+.point-section th {
+  width: 150px;
+  text-align: left;
+  background: #eee;
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+.student-info td,
+.point-section td {
+  padding: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  margin-bottom: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.action-button {
+  padding: 12px 20px;
+  font-weight: bold;
+  background-color: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+}
+
+/* 반응형 처리 */
+@media (max-width: 768px) {
+  .student-info table,
+  .point-section table {
+    font-size: 14px;
+  }
+
+  .student-info th,
+  .point-section th,
+  .student-info td,
+  .point-section td {
+    display: block;
+    width: 100%;
+  }
+
+  .student-info tr,
+  .point-section tr {
+    display: block;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+
+  .action-button {
+    max-width: 100%;
+  }
+}

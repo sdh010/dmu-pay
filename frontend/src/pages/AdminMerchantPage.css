@@ -1,0 +1,13 @@
+/* src/pages/AdminMerchantPage.css */
+.status-complete {
+  color: green;
+  font-weight: bold;
+}
+.status-pending {
+  color: orange;
+  font-weight: bold;
+}
+.status-error {
+  color: red;
+  font-weight: bold;
+}
